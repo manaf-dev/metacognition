@@ -1,0 +1,163 @@
+{% extends "_base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container-fluid p-0 mb-4">
+    <div class="owl-carousel header-carousel position-relative">
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="{% static 'img/carousel-2.jpg' %}" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #fb873f;">Welcome to
+                                Genius Academy</h5>
+                            <h1 class="display-3 text-white animated slideInDown">Interactive Learning Experience
+                            </h1>
+                            <p class=" text-white mb-4 pb-2">Engage with interactive lessons, quizzes, and
+                                projects. Experience hands-on learning that keeps you motivated and inspired.</p>
+                            <a href="about.html"
+                                class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'self_quiz' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Self-test Quiz</a>
+                        {% else %}
+                            <a href="{% url 'signup' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                        {% endif %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/about.jpg' %}" alt=""
+                        style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start pe-3">About Us</h6>
+                <h1 class="mb-4" style="color: #fb873f;">Welcome to Genius Academy</h1>
+                <p class="mb-4">At Genius Academy, we believe in accessible, innovative learning experiences that
+                    adapt to your schedule and learning style. Join us in embracing the future of education and
+                    unlock your potential with our immersive online courses.</p>
+                <p class="mb-4"> Welcom to Genius Academy, your gateway to boundless learning opportunities. We're
+                    dedicated to democratizing education, offering a diverse range of courses taught by industry
+                    experts. Our mission is to empower learners worldwide, fostering a community-driven platform
+                    where knowledge knows no limits.</p>
+                
+                <a class="btn text-light py-3 px-5 mt-2" href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center px-3">Popular Courses</h6>
+            <h1 class="mb-5" style="color: #fb873f;">Explore new and trending free online courses</h1>
+        </div>
+        <div class="row g-4 py-2">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="{% static 'img/course-1.jpg' %}" alt="">
+                        
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1"><a href="single.html" class="text-dark">HTML Course for Beginners </a></h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            4.55</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>5.8L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="{% static 'img/course-2.jpg' %}" alt="">
+                    </div>
+                    <div class="p-2 pb-0">
+                        <h5 class="mb-1">Front End Development-CSS
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            4.55</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>5.2L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="{% static 'img/course-3.jpg' %}" alt="">
+                    </div>
+                    <div class="p-2 pb-0">
+                        <h5 class="mb-1">Introduction to JavaScript
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            4.46</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>76L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="{% static 'img/course-4.jpg' %}" alt="">
+                    </div>
+                    <div class="p-2 pb-0">
+                        <h5 class="mb-1">Python Programming
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            3.54</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>3.3L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+    </div>
+</div>
+<div class="container text-center">
+    <a class="btn text-light py-3 px-5 mt-2 mb-5" href="{% url 'all_courses' %}">All Courses</a>
+</div>
+{% endblock content %}
+    

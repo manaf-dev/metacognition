@@ -1,0 +1,18 @@
+{% extends "_base.html" %}
+
+
+{% block content %}
+{% include "navbar.html" %}
+<div class="container-xxl py-5">
+<h2 class="text-center mb-4">Metacognition Quiz</h2>
+  
+<form method="post">
+  {% csrf_token %}
+  
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+</div>
+{% endblock content %}
+    
