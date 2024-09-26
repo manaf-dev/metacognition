@@ -14,16 +14,16 @@
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-sm-10 col-lg-8">
-                            <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #fb873f;">Welcome to
-                                Genius Academy</h5>
-                            <h1 class="display-3 text-white animated slideInDown">Interactive Learning Experience
+                            {% comment %} <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #fb873f;">Welcome to
+                                Genius Academy</h5> {% endcomment %}
+                            <h1 class="display-3 text-white animated slideInDown">Meta-Cognition Learning Experience
                             </h1>
-                            <p class=" text-white mb-4 pb-2">Engage with interactive lessons, quizzes, and
-                                projects. Experience hands-on learning that keeps you motivated and inspired.</p>
-                            <a href="about.html"
-                                class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            <p class=" text-white mb-4 pb-2">Knowing yourself is a step towards transforming your learning experience and thinking process. Take our Meta-Cognition Quiz to discover and reveal your unique learning profile, your thinking process, personalised strategies to enhance performance and cognitive abilities. <br />
+                            Improve your academic performance, enhance productivity and focus, grow your abilities now!</p>
+                            <a href="https://metacognition.streamlit.app" target="_blank"
+                                class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Take the Test</a>
                         {% if user.is_authenticated %}
-                            <a href="{% url 'self_quiz' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Self-test Quiz</a>
+                            <a href="{% url 'all_courses' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Our Courses</a>
                         {% else %}
                             <a href="{% url 'signup' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                         {% endif %}
@@ -51,10 +51,7 @@
                 <p class="mb-4">At Genius Academy, we believe in accessible, innovative learning experiences that
                     adapt to your schedule and learning style. Join us in embracing the future of education and
                     unlock your potential with our immersive online courses.</p>
-                <p class="mb-4"> Welcom to Genius Academy, your gateway to boundless learning opportunities. We're
-                    dedicated to democratizing education, offering a diverse range of courses taught by industry
-                    experts. Our mission is to empower learners worldwide, fostering a community-driven platform
-                    where knowledge knows no limits.</p>
+                <p class="mb-4">Metacognition, the ability to think about and regulate your own thinking, enhancing self-awareness, problem-solving, productivity, and deision-making to reach full potential.</p>
                 
                 <a class="btn text-light py-3 px-5 mt-2" href="#">Read More</a>
             </div>
