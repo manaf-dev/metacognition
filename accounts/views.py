@@ -7,7 +7,7 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             print("Account created successfully")
-            return redirect("home")
+            return redirect("login")
         else:
             print("Error creating account")
     return render(request, "accounts/signup.html")
